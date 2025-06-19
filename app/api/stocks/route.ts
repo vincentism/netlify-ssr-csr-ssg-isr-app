@@ -38,7 +38,7 @@ export async function GET(
 
   const data = await response.json();
   console.log('ddd1', data);
-  // revalidatePath('/isr2')
+  revalidatePath('/isr2')
 
   // const id = (await params).id;
   // e.g. Query a database for user with ID `id`
