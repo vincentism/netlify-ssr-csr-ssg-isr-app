@@ -26,7 +26,7 @@ import { revalidatePath } from 'next/cache'
 //     })(0);
 // });
 
-
+let count = 1;
 export async function GET(
   request: NextRequest,
   { params }: { params: Promise<{ id: string }> },
@@ -47,7 +47,7 @@ export async function GET(
 
   // const id = (await params).id;
   // e.g. Query a database for user with ID `id`
-  return new Response(JSON.stringify(data), {
+  return new Response(JSON.stringify(data) + count++, {
     status: 200,
     headers: { 'Content-Type': 'application/json' },
   });
