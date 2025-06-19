@@ -2,7 +2,7 @@
 
 export const revalidate = 10
 export default async function Post(params) {
-  const data = await fetch(`https://netlify-ssr-csr-ssg-isr-app.netlify.app/api/stockss`)
+  const data = await fetch(`https://netlify-ssr-csr-ssg-isr-app.netlify.app/api/stocks`)
   const posts = await data.json()
   return (
     <div>
