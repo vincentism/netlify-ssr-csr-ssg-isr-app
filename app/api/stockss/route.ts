@@ -1,5 +1,6 @@
 
 import { NextRequest } from 'next/server';
+import { revalidatePath } from 'next/cache'
 
 // export const runtime = 'edge';
 
@@ -36,14 +37,13 @@ export async function GET(
   // const response = await fetch('https://money.finance.sina.com.cn/quotes_service/api/json_v2.php/CN_MarketData.getKLineData?symbol=sz002095&scale=60&ma=no&datalen=2', {
   const response = await fetch('http://hq.sinajs.cn/list=sh600519', {
     next: { revalidate: 1 },
-    // cache: 'no-store',
     headers: { Referer: 'https://finance.sina.com.cn/' },
   });
 
 
   // const data = await response.text() + JSON.stringify(dirsList);
   const data = await response.text();
-    
+  revalidatePath('/isr2')
 
   // const id = (await params).id;
   // e.g. Query a database for user with ID `id`
