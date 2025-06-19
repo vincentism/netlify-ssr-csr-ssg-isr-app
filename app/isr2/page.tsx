@@ -1,13 +1,6 @@
-import Link from "next/link"
-import { ArrowLeft, RefreshCw } from "lucide-react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-
-
-
 // pages/posts/[id].js
 export default async function Post(params) {
-  const data = await fetch(`/api/stockss`)
+  const data = await fetch(`https://netlify-ssr-csr-ssg-isr-app.netlify.app/api/stockss`)
   const posts = await data.json()
   return (
     <div>
