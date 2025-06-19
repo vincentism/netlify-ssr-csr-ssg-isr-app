@@ -1,11 +1,13 @@
 // pages/posts/[id].js
+
+export const revalidate = 10
 export default async function Post(params) {
   const data = await fetch(`https://netlify-ssr-csr-ssg-isr-app.netlify.app/api/stockss`)
   const posts = await data.json()
   return (
     <div>
       <h1>test stocks</h1>
-      <h1>{posts}</h1>
+      <h1>{JSON.stringify(posts)}</h1>
     </div>
   );
 }
@@ -37,5 +39,4 @@ export async function generateMetadata({ params }) {
 // }
 
 // 核心 ISR 配置
-export const revalidate = 5; // 每 10 秒重新验证页面
-export const dynamicParams = true; // 替代 fallback: true/blocking
+// export const dynamicParams = true; // 替代 fallback: true/blocking
