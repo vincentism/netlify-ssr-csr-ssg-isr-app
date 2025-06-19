@@ -1,11 +1,11 @@
-import { revalidatePath } from 'next/cache'
 import Link from "next/link"
 import { ArrowLeft, RefreshCw } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import ClearBtn from './clearBtn';
 
 export const revalidate = 10
-revalidatePath('/isr3');
+
 
 export default function ISRPage() {
   // 生成当前时间和数据
@@ -38,6 +38,9 @@ export default function ISRPage() {
           </div>
           <p className="text-gray-600">结合静态生成和动态更新，在后台增量更新内容，平衡性能与新鲜度</p>
         </div>
+
+        <ClearBtn />
+
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 mb-6">
           <Card>
