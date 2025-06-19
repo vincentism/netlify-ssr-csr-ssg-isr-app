@@ -5,9 +5,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 
 export const revalidate = 10
+revalidatePath('/isr3');
 
 export default function ISRPage() {
-  revalidatePath('/isr3')
   // 生成当前时间和数据
   const currentTime = new Date().toLocaleString("zh-CN")
   const nextRevalidation = new Date(Date.now() + revalidate * 1000).toLocaleString("zh-CN")
