@@ -3,13 +3,15 @@ import { ArrowLeft, RefreshCw } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 
-export const revalidate = 60
+// export const revalidate = 60
+
+const tempNum = 60
 
 export default function ISRPage() {
   // 生成当前时间和数据
   const currentTime = new Date().toLocaleString("zh-CN")
-  const nextRevalidation = new Date(Date.now() + revalidate * 1000).toLocaleString("zh-CN")
-  const cacheKey = Math.floor(Date.now() / (revalidate * 1000))
+  const nextRevalidation = new Date(Date.now() + tempNum * 1000).toLocaleString("zh-CN")
+  const cacheKey = Math.floor(Date.now() / (tempNum * 1000))
 
   // 计算一些基本数据
   const now = new Date()
@@ -43,7 +45,7 @@ export default function ISRPage() {
               <CardTitle className="text-sm font-medium text-gray-500">重新验证间隔</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-xl font-bold text-yellow-600">{revalidate}秒</p>
+              <p className="text-xl font-bold text-yellow-600">{tempNum}秒</p>
               <p className="text-sm text-gray-500">自动更新</p>
             </CardContent>
           </Card>
@@ -85,7 +87,7 @@ export default function ISRPage() {
               <RefreshCw className="h-5 w-5 text-yellow-600" />
               <span>ISR 数据演示</span>
             </CardTitle>
-            <CardDescription>以下数据会在 {revalidate} 秒后的第一次访问时触发后台重新生成</CardDescription>
+            <CardDescription>以下数据会在 {tempNum} 秒后的第一次访问时触发后台重新生成</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
@@ -103,7 +105,7 @@ export default function ISRPage() {
                       <span className="font-medium">缓存键:</span> {cacheKey}
                     </p>
                     <p>
-                      <span className="font-medium">重新验证:</span> {revalidate}秒间隔
+                      <span className="font-medium">重新验证:</span> {tempNum}秒间隔
                     </p> 
                   </div>
                 </div>
@@ -126,7 +128,7 @@ export default function ISRPage() {
 
               <div className="mt-4 p-3 bg-yellow-50 rounded-lg">
                 <p className="text-sm text-yellow-700">
-                  💡 <strong>ISR 特性:</strong> 页面首次在构建时生成，之后每 {revalidate} 秒会检查是否需要更新。
+                  💡 <strong>ISR 特性:</strong> 页面首次在构建时生成，之后每 {tempNum} 秒会检查是否需要更新。
                   当有新请求时，如果超过重新验证时间，会在后台重新生成页面，用户仍然看到缓存版本直到新版本准备就绪。
                 </p>
               </div>
