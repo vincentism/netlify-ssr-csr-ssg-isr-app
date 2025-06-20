@@ -3,7 +3,7 @@ import { ArrowLeft, RefreshCw } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 
-export const revalidate = 10
+export const revalidate = 60
 
 export default function ISRPage() {
   // 生成当前时间和数据
