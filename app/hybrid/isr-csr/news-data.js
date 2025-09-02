@@ -1,0 +1,197 @@
+const companyNews = [
+  {
+    id: 1,
+    title: '公司荣获"2024年度最佳AI创新企业"奖项',
+    summary: "在刚刚结束的科技创新大会上，我公司凭借在人工智能领域的突出贡献获得殊荣。",
+    publishDate: "2024-01-15",
+    category: "公司荣誉",
+    readCount: 1247,
+    isHot: true,
+  },
+  {
+    id: 2,
+    title: "新一代云计算平台正式上线，性能提升300%",
+    summary: "经过18个月的研发，我们的新一代云计算平台今日正式发布，为客户提供更强大的计算能力。",
+    publishDate: "2024-01-12",
+    category: "产品发布",
+    readCount: 856,
+    isHot: false,
+  },
+  {
+    id: 3,
+    title: "与清华大学达成战略合作，共建AI实验室",
+    summary: "双方将在人工智能、机器学习等前沿技术领域开展深度合作，培养高端技术人才。",
+    publishDate: "2024-01-10",
+    category: "合作伙伴",
+    readCount: 634,
+    isHot: true,
+  },
+  {
+    id: 4,
+    title: "全球用户突破500万，创历史新高",
+    summary: "根据最新数据统计，我们的产品和服务已覆盖全球超过500万企业用户。",
+    publishDate: "2024-01-18",
+    category: "市场动态",
+    readCount: 2203,
+    isHot: true,
+  },
+  {
+    id: 5,
+    title: "发布《2024人工智能伦理白皮书》",
+    summary: "公司牵头制定行业首个AI伦理准则，推动人工智能技术健康发展。",
+    publishDate: "2024-01-20",
+    category: "社会责任",
+    readCount: 987,
+    isHot: false,
+  },
+  {
+    id: 6,
+    title: "智能客服系统重大版本更新",
+    summary: "新增多语言支持和情感分析功能，客户满意度提升45%。",
+    publishDate: "2024-01-22",
+    category: "产品更新",
+    readCount: 765,
+    isHot: true,
+  },
+  {
+    id: 7,
+    title: "入选国家级数字化转型服务商",
+    summary: "工信部正式授予公司「数字化转型标杆服务商」称号。",
+    publishDate: "2024-01-25",
+    category: "公司荣誉",
+    readCount: 1542,
+    isHot: true,
+  },
+  {
+    id: 8,
+    title: "与华为签署云服务合作协议",
+    summary: "双方将在混合云解决方案领域展开深度技术合作。",
+    publishDate: "2024-01-28",
+    category: "合作伙伴",
+    readCount: 1321,
+    isHot: false,
+  },
+  {
+    id: 9,
+    title: "开发者大会定档3月15日",
+    summary: "年度技术盛会即将召开，届时将发布多项革命性技术。",
+    publishDate: "2024-01-30",
+    category: "市场活动",
+    readCount: 843,
+    isHot: true,
+  },
+  {
+    id: 10,
+    title: "突破性进展：量子计算研究取得重要成果",
+    summary: "研发团队成功实现量子比特稳定性突破，相关论文登上《Nature》封面。",
+    publishDate: "2024-02-02",
+    category: "技术突破",
+    readCount: 2345,
+    isHot: true,
+  },
+  {
+    id: 11,
+    title: "启动「数字乡村」公益计划",
+    summary: "未来三年将投入1亿元助力农村数字化基础设施建设。",
+    publishDate: "2024-02-05",
+    category: "社会责任",
+    readCount: 672,
+    isHot: false,
+  },
+  {
+    id: 12,
+    title: "数据安全产品通过国家三级等保认证",
+    summary: "成为业内首个获得该认证的云原生安全解决方案。",
+    publishDate: "2024-02-08",
+    category: "产品认证",
+    readCount: 923,
+    isHot: true,
+  },
+  {
+    id: 13,
+    title: "成立北美研发中心",
+    summary: "投资5亿美元在硅谷建立人工智能研究院，吸引全球顶尖人才。",
+    publishDate: "2024-02-11",
+    category: "全球布局",
+    readCount: 1789,
+    isHot: true,
+  },
+  {
+    id: 14,
+    title: "实时数据分析引擎性能刷新世界纪录",
+    summary: "TPCx-BB测试成绩较业界平均水平快8.7倍，创下新里程碑。",
+    publishDate: "2024-02-14",
+    category: "技术突破",
+    readCount: 2055,
+    isHot: true,
+  },
+  {
+    id: 15,
+    title: "举办首届AI开发者大赛",
+    summary: "总奖金池500万元，面向全球征集创新应用解决方案。",
+    publishDate: "2024-02-17",
+    category: "市场活动",
+    readCount: 1347,
+    isHot: false,
+  },
+  {
+    id: 16,
+    title: "通过CMMI5级国际认证",
+    summary: "软件开发能力成熟度达到行业最高等级认证标准。",
+    publishDate: "2024-02-20",
+    category: "公司认证",
+    readCount: 698,
+    isHot: true,
+  },
+  {
+    id: 17,
+    title: "智能医疗解决方案落地30家三甲医院",
+    summary: "AI辅助诊断系统准确率超96%，获得临床专家高度认可。",
+    publishDate: "2024-02-23",
+    category: "行业应用",
+    readCount: 1567,
+    isHot: true,
+  },
+  {
+    id: 18,
+    title: "荣获「最佳雇主」称号",
+    summary: "在智联招聘年度评选中，公司员工满意度位列科技企业榜首。",
+    publishDate: "2024-02-26",
+    category: "公司荣誉",
+    readCount: 1024,
+    isHot: false,
+  },
+  {
+    id: 19,
+    title: "区块链平台通过金融级安全测试",
+    summary: "成为首个符合央行数字货币研究所技术标准的民营企业。",
+    publishDate: "2024-03-01",
+    category: "技术认证",
+    readCount: 1876,
+    isHot: true,
+  },
+  {
+    id: 20,
+    title: "与麻省理工联合培养AI博士",
+    summary: "启动全球精英计划，每年遴选20名优秀工程师赴美深造。",
+    publishDate: "2024-03-05",
+    category: "人才培养",
+    readCount: 1423,
+    isHot: true,
+  }
+];
+
+// 使用Fisher-Yates算法实现无重复随机抽样
+export function getRandomNews() {
+  // 创建副本避免污染原数据
+  const arr = [...companyNews];
+  let m = arr.length;
+  
+  // 现代版Fisher-Yates洗牌算法
+  while (m) {
+    const i = Math.floor(Math.random() * m--);
+    [arr[m], arr[i]] = [arr[i], arr[m]];
+  }
+  
+  return arr.slice(0, 3);
+}
