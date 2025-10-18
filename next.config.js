@@ -4,6 +4,8 @@ const nextConfig = {
     // experimental: {
     //     ppr: "incremental",
     //   },
+
+    trailingSlash: true,
       eslint: {
         ignoreDuringBuilds: true,
       },

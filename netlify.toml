@@ -18,3 +18,13 @@
   from = "/api/*"
   to = "/.netlify/functions/___netlify-handler"
   status = 200
+
+  # 声明路由映射
+[[edge_functions]]
+  function = "auth"           # 函数文件名
+  path = "/*"            # 匹配路径
+
+
+[[edge_functions]]
+  function = "transform"           # 函数文件名
+  path = "/*"            # 匹配路径
