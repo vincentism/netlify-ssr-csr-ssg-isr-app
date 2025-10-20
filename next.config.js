@@ -5,7 +5,7 @@ const nextConfig = {
     //     ppr: "incremental",
     //   },
 
-    trailingSlash: false,
+    trailingSlash: true,
       eslint: {
         ignoreDuringBuilds: true,
       },
