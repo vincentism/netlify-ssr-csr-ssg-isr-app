@@ -7,7 +7,7 @@ export function cn(...inputs: ClassValue[]) {
 
 export function sleep(min = 10, max = 41) {
   const duration = Math.floor(Math.random() * max) + min; // 生成10-50ms随机整数
-  return new Promise(resolve => setTimeout(resolve, duration));
+  return new Promise(resolve => setTimeout(resolve, 5000));
 }
 
 export function randomRange(min = 10, max = 20) {
